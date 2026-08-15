@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.resource-monitor.backup</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__PYTHON__</string>
+    <string>__REPO__/scripts/backup_db.py</string>
+    <string>--db</string>
+    <string>__RM_DB__</string>
+    <string>--destination</string>
+    <string>__RM_BACKUP_DESTINATION__</string>
+    <string>--retain-recent</string>
+    <string>__RM_RETAIN_RECENT__</string>
+    <string>--retain-daily</string>
+    <string>__RM_RETAIN_DAILY__</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>__REPO__</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>__RM_BACKUP_INTERVAL__</integer>
+  <key>ProcessType</key>
+  <string>Background</string>
+  <key>StandardOutPath</key>
+  <string>__RM_BACKUP_LOG_DIR__/backup.stdout.log</string>
+  <key>StandardErrorPath</key>
+  <string>__RM_BACKUP_LOG_DIR__/backup.stderr.log</string>
+</dict>
+</plist>

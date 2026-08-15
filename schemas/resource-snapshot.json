@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://resource-monitor.example/schemas/resource-snapshot.json",
+  "title": "Resource Monitor snapshot",
+  "type": "object",
+  "required": ["record_id", "schema_version", "subject_id", "subject_type", "observed_at", "source_id", "values"],
+  "properties": {
+    "record_id": {"type": "string", "minLength": 1},
+    "schema_version": {"type": "integer", "minimum": 1},
+    "subject_id": {"type": "string", "minLength": 1},
+    "subject_type": {"type": "string", "minLength": 1},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "source_id": {"type": "string", "minLength": 1},
+    "values": {"type": "object", "additionalProperties": true}
+  },
+  "additionalProperties": false
+}

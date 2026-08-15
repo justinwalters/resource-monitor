@@ -1,0 +1,10 @@
+{
+  "collection_interval_seconds": 60,
+  "sources": [
+    {
+      "type": "deployment-defined-source",
+      "source_id": "configured-source",
+      "settings": {}
+    }
+  ]
+}

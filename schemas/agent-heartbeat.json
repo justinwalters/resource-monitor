@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://resource-monitor.example/schemas/agent-heartbeat.json",
+  "title": "Resource Monitor agent heartbeat lease",
+  "type": "object",
+  "required": ["agent_id", "lease_id", "sent_at", "expires_at", "metadata"],
+  "properties": {
+    "agent_id": {"type": "string", "minLength": 1},
+    "lease_id": {"type": "string", "minLength": 1},
+    "sent_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "metadata": {"type": "object", "additionalProperties": true}
+  },
+  "additionalProperties": false
+}
